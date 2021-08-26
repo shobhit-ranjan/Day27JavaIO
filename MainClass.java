@@ -12,6 +12,10 @@ public class MainClass {
 		Path path = Paths.get("C:\\Users\\shobh\\eclipse-workspace\\Day27JavaIO\\src\\filedemo.txt");
         List<String> list = Files.readAllLines(path);
         System.out.println(list);
+        
+		Files.deleteIfExists(path);
+		Files.createFile(path );
+        System.out.println(Files.exists(path));
 	}
 
 }
