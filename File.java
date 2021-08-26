@@ -1,5 +1,5 @@
 
-public class File {
+ public class File {
 
 	int Id;
 	String userName;
