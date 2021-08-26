@@ -7,7 +7,7 @@ public class MainClass {
 
 	public static void main(String[] args) throws IOException {
 
-		//Employeesystem.showUser();
+		Employeesystem.showUser();
 		
 		Path path = Paths.get("C:\\Users\\shobh\\eclipse-workspace\\Day27JavaIO\\src\\filedemo.txt");
         List<String> list = Files.readAllLines(path);
@@ -15,7 +15,9 @@ public class MainClass {
         
 		Files.deleteIfExists(path);
 		Files.createFile(path );
-         System.out.println(Files.exists(path));
+        System.out.println(Files.exists(path));
+        
+        Files.walk(path).filter(Files::isRegularFile).forEach(System.out::println);
 	}
 
 }
